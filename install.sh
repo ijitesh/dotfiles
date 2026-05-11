@@ -74,3 +74,16 @@ echo ""
 echo "✅ Done! Please:"
 echo "   1. Set terminal font to 'MesloLGS NF' in Terminator preferences"
 echo "   2. Log out and back in (or run: exec zsh)"
+
+
+# ─── NVM + Node.js ─────────────────────────────────────────
+echo "📦 Installing NVM..."
+if [ ! -d "$HOME/.nvm" ]; then
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm install --lts
+  nvm alias default node
+else
+  echo "NVM already installed, skipping..."
+fi
