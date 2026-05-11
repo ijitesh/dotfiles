@@ -1,0 +1,16 @@
+[user]
+	name = ijitesh
+	email = jiteshstudy9@gmail.com
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[color]
+	ui = auto
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    lg = log --oneline --graph --all --decorate
+    undo = reset HEAD~1 --mixed
+    unstage = reset HEAD --
